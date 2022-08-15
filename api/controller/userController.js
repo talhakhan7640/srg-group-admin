@@ -58,11 +58,9 @@ export const createUser = async (req, res) => {
   };
 
   var docName = firstName + "-" + lastName;
-  console.log(docName);
 
-  var res = await db.collection("Users").doc(docName).set({ data });
-
-  console.log(`Added user with Name: `, docName);
+  var res = await db.collection("Users").doc(docName).set({ data })
+    .then(() => console.log(`Added user with Name: `, docName));
 };
 
 /**
@@ -102,9 +100,9 @@ export const updateUser = async (req, res) => {
 
   var docName = firstName + "-" + lastName;
 
-  var res = await db.collection("Users").doc(req.params.id).set(data);
-
-  console.log(`Updated user with name: `, docName);
+  var res = await db.collection("Users").doc(req.params.id).set(data)
+    .then(() => console.log(`Updated user with name: `, docName));
+  
 };
 
 /**
@@ -117,6 +115,6 @@ export const updateUser = async (req, res) => {
  * 
  */
 export const deleteUser = async (req, res) => {
-  var res = await db.collection("Users").doc(req.params.id).delete();
-  console.log("Deleted user with name:", req.params.id);
+  var res = await db.collection("Users").doc(req.params.id).delete()
+    .then(() => console.log("Deleted user with name:", req.params.id));
 };
