@@ -1,6 +1,4 @@
 // Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import { initializeApp } from 'firebase/app';
 import  { initializeApp, applicationDefault, cert } from 'firebase-admin/app';
 import { getFirestore, Timestamp, FieldValue } from 'firebase-admin/firestore';
 // TODO: Add SDKs for Firebase products that you want to use

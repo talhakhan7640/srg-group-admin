@@ -3,6 +3,7 @@ import db from "../firebaseConfig.js";
 import { Timestamp } from "firebase-admin/firestore";
 
 /**
+ * ***** Get Users *****
  * 
  * The below function is a controller responsible for 
  * getting all the user entries from database.
@@ -21,6 +22,7 @@ export const getUsers = async (req, res) => {
 
 
 /**
+ *  ***** Create User *****
  * 
  * The below function is a controller responsible for
  * performing a task of creating a new user entry in database.
@@ -31,13 +33,13 @@ export const getUsers = async (req, res) => {
  */
 export const createUser = async (req, res) => {
   // Set the name information.
-  var firstName = req.body.firstname;
-  var middleName = req.body.middlename;
-  var lastName = req.body.lastname;
+  var firstName = req.body.first_name;
+  var middleName = req.body.middle_name;
+  var lastName = req.body.last_name;
 
   // Set the contact information.
-  var mobileNumber = req.body.mobilenumber;
-  var alternateMobileNumber = req.body.alternate_mobilenumber;
+  var mobileNumber = req.body.mobile_number;
+  var alternateMobileNumber = req.body.alternate_mobile_number;
   var address = req.body.address;
 
   // Create username and password for the user.
@@ -64,6 +66,7 @@ export const createUser = async (req, res) => {
 };
 
 /**
+ * ***** Update User *****
  * 
  * The below function is a controller responsible for 
  * performing a task of updating a user entry in database.
@@ -74,13 +77,13 @@ export const createUser = async (req, res) => {
  */
 export const updateUser = async (req, res) => {
   // Set the name information.
-  var firstName = req.body.firstname;
-  var middleName = req.body.middlename;
-  var lastName = req.body.lastname;
+  var firstName = req.body.first_name;
+  var middleName = req.body.middle_name;
+  var lastName = req.body.last_name;
 
   // Set the contact information.
-  var mobileNumber = req.body.mobilenumber;
-  var alternateMobileNumber = req.body.alternate_mobilenumber;
+  var mobileNumber = req.body.mobile_number;
+  var alternateMobileNumber = req.body.alternate_mobile_number;
   var address = req.body.address;
 
   // Create username and password for the user.
@@ -106,6 +109,7 @@ export const updateUser = async (req, res) => {
 };
 
 /**
+ * ***** Delete User *****
  * 
  * The below function is a controller responsible for 
  * performing a task of deleting a user entry from database.

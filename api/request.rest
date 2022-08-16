@@ -3,14 +3,14 @@ POST http://localhost:5000/users/create-user
 Content-Type: application/json
 
 {
-    "firstname": "Donald",
-    "middlename": "G",
-    "lastname": "Henderson",
-    "mobilenumber": "970-301-9004",
-    "alternate_mobilenumber": "970-336-3842",
+    "first_name": "Donald",
+    "middle_name": "G",
+    "last_name": "Henderson",
+    "mobile_number": "970-301-9004",
+    "alternate_mobile_number": "970-336-3842",
     "address" : "146 Timberbrook Lane, Greeley, Colorado(CO), 80631",
-    "username": "Shane Watson",
-    "password": "alex43"
+    "username": "donaldgh",
+    "password": "donaldgh43"
 }
 
 ###
@@ -21,11 +21,11 @@ PUT http://localhost:5000/users/update-user/Donald-Henderson
 Content-Type: application/json
 
 {
-    "firstname": "Donald",
-    "middlename": "G",
-    "lastname": "Trump",
-    "mobilenumber": "970-301-2022",
-    "alternate_mobilenumber": "970-336-2020",
+    "first_name": "Donald",
+    "middle_name": "G",
+    "last_name": "Trump",
+    "mobile_number": "970-301-2022",
+    "alternate_mobile_number": "970-336-2020",
     "address" : "146 Timberbrook Lane, Greeley, Colorado(CO), 80631",
     "username": "donaldgt",
     "password": "donald43gt"
