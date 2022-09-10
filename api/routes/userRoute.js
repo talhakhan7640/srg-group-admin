@@ -8,16 +8,16 @@ const router = express.Router();
 
 
 // API endpoint for getting all users from database.
-router.get("/users", getUsers);
+router.get("/", getUsers);
 
 // API endpoint for creating new user entry in database.
-router.post("/users/create-user", createUser);
+router.post("/create-user", createUser);
 
 // API endpoint updating a user in database.
-router.put("/users/update-user/:id", updateUser);
+router.put("/update-user/:id", updateUser);
 
 // API endpoint deleting a user from database.
-router.delete("/users/delete-user/:id", deleteUser);
+router.delete("/delete-user/:id", deleteUser);
 
 
 export default router;

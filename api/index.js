@@ -2,7 +2,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
-import userRoute from "./routes/userRoute.js"
+import userRoute from "./routes/userRoute.js";
+import vehicleRoute from "./routes/vehicleRoute.js"
 dotenv.config();
 
 
@@ -11,7 +12,8 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use("/", userRoute);
+app.use("/users", userRoute);
+app.use("/vehicles", vehicleRoute);
 
 const PORT = process.env.PORT || 5000;
 
